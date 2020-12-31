@@ -19,7 +19,8 @@
 10. minx,miny, maxx,maxy를 이용해 blue 영역에 맞도록 프레임에 사각형을 그려준다. 처음 시작점은 minx, miny 이고 width는 maxx-minx, height는 maxy-miny로 구한다. 마지막에 frame 이미지와 blueScreen을 띄운다.
 
 ### knn
-
+<img src="https://user-images.githubusercontent.com/59547069/103414758-a5a93300-4bc2-11eb-97b5-ad06be2fe616.png" width="600" height="600">
+<br>
 <img src="https://user-images.githubusercontent.com/59547069/103400719-85a94d80-4b89-11eb-9b08-85fd068660d3.png" width="600" height="600">
 <br>
 <img src="https://user-images.githubusercontent.com/59547069/103400743-9c4fa480-4b89-11eb-810e-f4695b17f199.png" width="600" height="600">
@@ -42,7 +43,7 @@ opencv의 ml의 Knearest::create를 이용하여 train_features로 knn 학습시
 10. 마지막으로 3을 누르면 n4()가 실행된다. 입력받은 이미지를 임계값 127로 이진화한다. 임계값이 넘으면 255로 값을 변경한다. 그리고 골격화 이미지를 저장할 skel을 만들어준다. 색상 이미지가 아니므로 채널은 1개로 만들고 원본 이미지와 크기를 같게 한다. opening 연산을 하고 outline의 돌출 부분을 subtract 한다. 그리고 or 논리연산으로 기존의 skel과 합친다. 다음으로는 침식 연산을 하고 이를 반복한다. 그러면 이미지 골격화가 이루어진다. 이 이미지를 가지고 knn_func()에 파라미터로 넣어서 학습을 시킨 후 테스트 과정을 거친다. 그 방법을 n2() 함수에서의 테스트 과정과 유사하다.
 <br>
 
-### edge detection
+### line detection
 <img src="https://user-images.githubusercontent.com/59547069/103400770-affb0b00-4b89-11eb-9fd6-d992573ffaa1.png" width="600" height="700">
 
 1. 비디오를 읽어들인다.
